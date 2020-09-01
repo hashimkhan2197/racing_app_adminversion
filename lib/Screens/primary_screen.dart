@@ -6,6 +6,7 @@ import 'package:racingappadmin/Providers/user.dart';
 import 'package:racingappadmin/Screens/ChatScreens/all_chats_screen.dart';
 import 'package:racingappadmin/Screens/ChatScreens/chat_screen.dart';
 import 'package:racingappadmin/Screens/EventsScreen.dart/EventsScreen.dart';
+import 'package:racingappadmin/Screens/orders/order_history.dart';
 import 'package:racingappadmin/Widgets/responsive_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -51,6 +52,23 @@ class _PrimaryScreenState extends State<PrimaryScreen> {
           ),
           centerTitle: true,
           actions: <Widget>[
+            InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return OrderHistory();
+                }));
+              },
+              child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  // child: CircleAvatar(
+                  //   backgroundImage: AssetImage("assets/logo.png"),
+                  // ),
+                  child: Icon(
+                    Icons.shop,
+                    color: Colors.white,
+                    size: 30,
+                  )),
+            ),
             InkWell(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context){
