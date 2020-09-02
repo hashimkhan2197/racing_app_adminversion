@@ -78,10 +78,12 @@ class _BodyState extends State<Body> {
   }
 
   Widget categoryItems(List<Product> categoryList,String category) {
-    var productCategory= 'Car';
-    if(category == carsCategories[1]){
-        productCategory = 'Car';
-    }else if(category == carsCategories[2]){productCategory = "Car Parts";}
+    var productCategory = 'Car';
+    if (category == carsCategories[1]) {
+      productCategory = 'Sports Car';
+    } else if (category == carsCategories[2]) {
+      productCategory = "Car Parts";
+    }
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
       child: StreamBuilder(

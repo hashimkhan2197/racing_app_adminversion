@@ -72,7 +72,7 @@ class SettingsScreenState extends State<SettingsScreen> {
 
   Future uploadFile() async {
     final FirebaseStorage _storgae = FirebaseStorage(
-        storageBucket: 'gs://speakany-94f37.appspot.com/');
+        storageBucket: 'gs://racing-app-b96b1.appspot.com/');
     StorageUploadTask uploadTask;
     String filePath = '${DateTime.now()}.png';
     uploadTask = _storgae.ref().child(filePath).putFile(avatarImageFile);
@@ -239,6 +239,59 @@ class SettingsScreenState extends State<SettingsScreen> {
           padding: EdgeInsets.only(left: 15.0, right: 15.0),
         ),
 
+        Align(
+          alignment: Alignment.bottomLeft,
+          child: Container(
+            height: 250,
+//            width: 250,
+            margin: EdgeInsets.only(top: 8,left: 16,bottom: 25),
+            //padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: StreamBuilder(
+                stream: Firestore.instance
+                    .collection('ads')
+                    .snapshots(),
+                builder: (context, AsyncSnapshot snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  }
+                  final snapShotData = snapshot.data.documents;
+                  if (snapShotData.length == 0) {
+                    return Center(
+                      child: Text("No products added"),
+                    );
+                  }
+                  return ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: snapShotData.length,
+                      itemBuilder: (context, index) {
+                        DocumentSnapshot data = snapshot.data.documents[index];
+                        return Container(
+                          child: Align(alignment:Alignment.bottomRight,child: FlatButton(onPressed:(){
+                            Firestore.instance.collection('ads').document(data.documentID).delete();
+                          },child: Text("Delete",style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold,fontSize: 24),),)),
+                          margin: EdgeInsets.symmetric(horizontal: 8),
+                          width: 250,
+                          height: 250,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[300],
+                            border: Border.all(color: Colors.grey),
+                            image: DecorationImage(
+                              image: NetworkImage(data.data['url']),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(10.0),
+                              topRight: Radius.circular(10.0),
+                            ),
+                          ),
+                        );
+                      });
+                }),
+          ),
+        ),
         // Loading
         Positioned(
           child: isLoading

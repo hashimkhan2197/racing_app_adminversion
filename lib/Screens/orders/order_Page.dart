@@ -485,6 +485,31 @@ class _OrderPageState extends State<OrderPage> {
                     ],
                   ),
                 ),
+                SizedBox(height: 20,),
+                Container(
+                  margin: EdgeInsets.only(top: 16, bottom: 16),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).buttonColor,
+                    shape: BoxShape.rectangle,
+                    borderRadius:
+                    BorderRadius.all(Radius.circular(8)),
+                  ),
+                  width: 200,
+                  child: FlatButton(
+                    child: Text('Completed',
+                        style: TextStyle(
+                            fontSize: 20, color: Colors.white)),
+                    onPressed: () {
+                      Firestore.instance
+                          .collection('orders').document(widget.orderSnapshot.documentID).updateData({
+                        'status':'completed'
+                      }).then((value) {
+                        Navigator.pop(context);
+                      });
+//                      FirebaseAuth.instance.signOut();
+                    },
+                  ),
+                ),
                 SizedBox(height: 20,)
               ],
             ),

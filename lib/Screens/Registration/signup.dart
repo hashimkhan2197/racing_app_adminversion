@@ -558,7 +558,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 });
 
                 final FirebaseStorage _storgae = FirebaseStorage(
-                    storageBucket: 'gs://speakany-94f37.appspot.com/');
+                    storageBucket: 'gs://racing-app-b96b1.appspot.com/');
                 StorageUploadTask uploadTask;
                 String filePath = '${DateTime.now()}.png';
                 uploadTask = _storgae.ref().child(filePath).putFile(image);

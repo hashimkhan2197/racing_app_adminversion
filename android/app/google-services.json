@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "598123011760",
-    "firebase_url": "https://racing-app-55a9e.firebaseio.com",
-    "project_id": "racing-app-55a9e",
-    "storage_bucket": "racing-app-55a9e.appspot.com"
+    "project_number": "80683762940",
+    "firebase_url": "https://racing-app-b96b1.firebaseio.com",
+    "project_id": "racing-app-b96b1",
+    "storage_bucket": "racing-app-b96b1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:598123011760:android:7fbdd7542c387d9337a575",
+        "mobilesdk_app_id": "1:80683762940:android:961177588513b45161c379",
         "android_client_info": {
           "package_name": "app.grocerycorporation.racingappadmin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "598123011760-plo77p6d1ojoqjfa032vn2vidcetut1p.apps.googleusercontent.com",
+          "client_id": "80683762940-3c53k5td88u0qjau6epq5nvu42pdvllt.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDgdYtolp6vVmS2FRF6ZpWHJhQmfbvcAXk"
+          "current_key": "AIzaSyDCwwlKyj6U0dcD1jhXhlGq4NpmdGd4JHU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "598123011760-plo77p6d1ojoqjfa032vn2vidcetut1p.apps.googleusercontent.com",
+              "client_id": "80683762940-3c53k5td88u0qjau6epq5nvu42pdvllt.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -37,27 +37,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:598123011760:android:30b00399e6271e2037a575",
+        "mobilesdk_app_id": "1:80683762940:android:79d030d92a9ef9f861c379",
         "android_client_info": {
-          "package_name": "com.example.racingApp"
+          "package_name": "com.smartersvision.racingappuser"
         }
       },
       "oauth_client": [
         {
-          "client_id": "598123011760-plo77p6d1ojoqjfa032vn2vidcetut1p.apps.googleusercontent.com",
+          "client_id": "80683762940-3c53k5td88u0qjau6epq5nvu42pdvllt.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDgdYtolp6vVmS2FRF6ZpWHJhQmfbvcAXk"
+          "current_key": "AIzaSyDCwwlKyj6U0dcD1jhXhlGq4NpmdGd4JHU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "598123011760-plo77p6d1ojoqjfa032vn2vidcetut1p.apps.googleusercontent.com",
+              "client_id": "80683762940-3c53k5td88u0qjau6epq5nvu42pdvllt.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -596,7 +596,7 @@ class _AddclothesScreenState extends State<AddclothesScreen> {
             });
 
             final FirebaseStorage _storgae = FirebaseStorage(
-                storageBucket: 'gs://racing-app-55a9e.appspot.com/');
+                storageBucket: 'gs://racing-app-b96b1.appspot.com/');
             StorageUploadTask uploadTask;
             String filePath = '${DateTime.now()}.png';
             uploadTask = _storgae.ref().child(filePath).putFile(image);

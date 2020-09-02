@@ -297,6 +297,28 @@ class _AddCarScreenState extends State<AddCarScreen> {
                       child: FlatButton(
                         onPressed: () {
                           setState(() {
+                            _productCategory = "Sports Car";
+                            _selectProductCategory = false;
+                          });
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Sports Car",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Theme.of(context).primaryColor),
+                          ),
+                        ),
+                      ),
+                    ),
+                  if (_selectProductCategory == true)
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      child: FlatButton(
+                        onPressed: () {
+                          setState(() {
                             _productCategory = "Car Parts";
                             _selectProductCategory = false;
                           });
@@ -552,7 +574,7 @@ class _AddCarScreenState extends State<AddCarScreen> {
             });
 
             final FirebaseStorage _storgae = FirebaseStorage(
-                storageBucket: 'gs://racing-app-55a9e.appspot.com/');
+                storageBucket: 'gs://racing-app-b96b1.appspot.com/');
             StorageUploadTask uploadTask;
             String filePath = '${DateTime.now()}.png';
             uploadTask = _storgae.ref().child(filePath).putFile(image);
